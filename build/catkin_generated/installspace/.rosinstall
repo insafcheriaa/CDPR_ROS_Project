@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/insaf/ros_ws/install/setup.sh

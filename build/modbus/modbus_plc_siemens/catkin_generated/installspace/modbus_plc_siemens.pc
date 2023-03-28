@@ -1,0 +1,8 @@
+prefix=/home/insaf/ros_ws/install
+
+Name: modbus_plc_siemens
+Description: Description of modbus_plc_siemens
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

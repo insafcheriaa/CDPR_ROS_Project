@@ -1,0 +1,7 @@
+set(modbus_cognex_insight_SETUP_PY_SETUP_MODULE "distutils.core")
+set(modbus_cognex_insight_SETUP_PY_VERSION "0.0.0")
+set(modbus_cognex_insight_SETUP_PY_SCRIPTS "")
+set(modbus_cognex_insight_SETUP_PY_PACKAGES "modbus_cognex_insight")
+set(modbus_cognex_insight_SETUP_PY_PACKAGE_DIRS "src/modbus_cognex_insight")
+set(modbus_cognex_insight_SETUP_PY_MODULES "")
+set(modbus_cognex_insight_SETUP_PY_MODULE_DIRS "")

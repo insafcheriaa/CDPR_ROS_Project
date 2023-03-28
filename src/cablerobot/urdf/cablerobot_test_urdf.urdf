@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cablerobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.5 0.5 -1.5406E-08"
+        rpy="0 0 0" />
+      <mass
+        value="8.5368" />
+      <inertia
+        ixx="0.37067"
+        ixy="3.2451E-17"
+        ixz="-7.9238E-18"
+        iyy="0.36746"
+        iyz="-7.0397E-18"
+        izz="0.72401" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cablerobot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cablerobot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Pulley1_Link">
+    <inertial>
+      <origin
+        xyz="5.5511E-17 -0.00077655 0.048379"
+        rpy="0 0 0" />
+      <mass
+        value="0.45929" />
+      <inertia
+        ixx="0.00046863"
+        ixy="-1.2313E-20"
+        ixz="-1.5663E-20"
+        iyy="0.00048271"
+        iyz="5.9283E-06"
+        izz="0.00080225" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cablerobot/meshes/Pulley1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cablerobot/meshes/Pulley1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Pulley1_Joint"
+    type="continuous">
+    <origin
+      xyz="0.1 0 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Pulley1_Link" />
+    <axis
+      xyz="0 0 1" />
+      <joint_controller name="position_controller"/> 
+  </joint>
+  <controller name="position_controller" type="effort_controllers/JointPositionController">
+    <joint name="pulley1_joint"/>
+  </controller>
+    
+  <link
+    name="Pulley2_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.00077655 0.048379"
+        rpy="0 0 0" />
+      <mass
+        value="0.45929" />
+      <inertia
+        ixx="0.00046863"
+        ixy="-5.0146E-20"
+        ixz="-5.0455E-21"
+        iyy="0.00048271"
+        iyz="5.9283E-06"
+        izz="0.00080225" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cablerobot/meshes/Pulley2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cablerobot/meshes/Pulley2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Pulley2_Joint"
+    type="continuous">
+    <origin
+      xyz="0.9 0 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Pulley2_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Pulley3_Link">
+    <inertial>
+      <origin
+        xyz="-5.5511E-17 -0.00077655 0.048379"
+        rpy="0 0 0" />
+      <mass
+        value="0.45929" />
+      <inertia
+        ixx="0.00046863"
+        ixy="-1.3876E-19"
+        ixz="-2.3049E-20"
+        iyy="0.00048271"
+        iyz="5.9283E-06"
+        izz="0.00080225" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cablerobot/meshes/Pulley3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cablerobot/meshes/Pulley3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Pulley3_Joint"
+    type="continuous">
+    <origin
+      xyz="0.9 1 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Pulley3_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Pulley4_Link">
+    <inertial>
+      <origin
+        xyz="5.5511E-17 -0.00077655 0.048379"
+        rpy="0 0 0" />
+      <mass
+        value="0.45929" />
+      <inertia
+        ixx="0.00046863"
+        ixy="1.6031E-20"
+        ixz="-5.1415E-21"
+        iyy="0.00048271"
+        iyz="5.9283E-06"
+        izz="0.00080225" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cablerobot/meshes/Pulley4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cablerobot/meshes/Pulley4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Pulley4_Joint"
+    type="continuous">
+    <origin
+      xyz="0.1 1 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Pulley4_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

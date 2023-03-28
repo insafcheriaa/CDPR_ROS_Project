@@ -1,0 +1,33 @@
+<launch>
+  <arg
+    name="model" />
+  <param
+    name="robot_description"
+    textfile="$(find cablerobot)/urdf/cablerobot_test_urdf.urdf" />
+
+  <node
+    name="joint_state_publisher_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="Teleop_node"
+    pkg="my_package"
+    type="teleop_node.py"
+    output="screen" 
+    args="-d $(find my_package)/teleop_node.py" />
+  <node
+    name="modbus_node"
+    pkg="my_package"
+    type="modbus.py" 
+    args="-d $(find my_package)/modbus.py" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find cablerobot)/urdf.rviz" />
+</launch>
+

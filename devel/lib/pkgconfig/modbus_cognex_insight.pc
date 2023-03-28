@@ -1,0 +1,8 @@
+prefix=/home/insaf/ros_ws/devel
+
+Name: modbus_cognex_insight
+Description: Description of modbus_cognex_insight
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

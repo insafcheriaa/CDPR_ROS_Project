@@ -1,0 +1,2 @@
+cablerobot:modbus/modbus:modbus/modbus_cognex_insight:modbus/modbus_plc_siemens:my_package
+-DCATKIN_DEVEL_PREFIX=/home/insaf/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/insaf/ros_ws/install -G Unix Makefiles
